@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maklam — Design & Branding</title>
+    <meta name="description" content="Maklam cria identidades visuais, sites e direção de arte com estética, clareza e estratégia.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">MAKLAM</div>
+
+        <nav aria-label="Navegação principal">
+            <ul>
+                <li>
+                    <a href="#contato" class="cta-primary">SOLICITE UMA PROPOSTA</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" aria-label="Apresentação">
+            <h1>ELEVE SUA <span class="marca-destaque">MARCA</span></h1>
+        </section>
+
+        <section class="pilares" aria-labelledby="proposito-title">
+            <h2 id="proposito-title">NOSSO PROPÓSITO É IMPULSIONAR O VALOR DE PESSOAS E ORGANIZAÇÕES</h2>
+
+            <div class="cards">
+                <article class="card">
+                    <img src="assets/design/bortoleto.jpg" alt="Projeto de branding" loading="lazy">
+                    <h3>Branding</h3>
+                </article>
+
+                <article class="card">
+                    <img src="assets/design/cyphus.jpg" alt="Projeto de site" loading="lazy">
+                    <h3>Sites</h3>
+                </article>
+
+                <article class="card">
+                    <img src="assets/design/fern3.png" alt="Projeto de direção de arte" loading="lazy">
+                    <h3>Direção de Arte</h3>
+                </article>
+            </div>
+        </section>
+
+        <section class="galeria" id="portfolio" aria-labelledby="galeria-title">
+            <h2 id="galeria-title">GALERIA</h2>
+
+            <div class="carousel">
+                <div class="carousel-track">
+                    <img src="assets/design/1.jpg" alt="Projeto 1" loading="lazy">
+                    <img src="assets/design/2.png" alt="Projeto 2" loading="lazy">
+                    <img src="assets/design/3.jpg" alt="Projeto 3" loading="lazy">
+                    <img src="assets/design/4.jpg" alt="Projeto 4" loading="lazy">
+                    <img src="assets/design/5.jpg" alt="Projeto 5" loading="lazy">
+                    <img src="assets/design/6.jpg" alt="Projeto 6" loading="lazy">
+                    <img src="assets/design/7.jpg" alt="Projeto 7" loading="lazy">
+                    <img src="assets/design/8.jpg" alt="Projeto 8" loading="lazy">
+                    <img src="assets/design/9.jpg" alt="Projeto 9" loading="lazy">
+                    <img src="assets/design/bortoleto.jpg" alt="Projeto 10" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <section class="pilares" aria-labelledby="servicos-title">
+            <h2 id="servicos-title">Usamos o design como uma ferramenta viva.</h2>
+        </section>
+
+        <section class="frase" aria-label="Frase de impacto">
+            <h2>Estética é estratégia.</h2>
+        </section>
+
+        <section class="contato" id="contato" aria-labelledby="contato-title">
+            <h2 id="contato-title">Pronto para dar forma à sua marca?</h2>
+            <p>Me conte sobre o seu projeto e vamos construir algo que represente você com intenção.</p>
+
+            <form action="https://formsubmit.co/thiagomaklam@outlook.com" method="POST">
+                <input type="text" name="nome" placeholder="Seu nome" required>
+                <input type="email" name="email" placeholder="Seu e-mail" required>
+                <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
+
+                <input type="hidden" name="_subject" value="Nova mensagem do site MAKLAM">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+
+                <button type="submit">Enviar mensagem</button>
+            </form>
+
+            <a href="https://wa.me/5564992100678?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20falar%20sobre%20um%20projeto." class="whats-btn" target="_blank" rel="noopener noreferrer">
+                Fale comigo pelo WhatsApp
+            </a>
+        </section>
+    </main>
+</body>
+</html>
