@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Maklam — Design & Branding</title>
+
+  <meta
+    name="description"
+    content="Maklam cria identidades visuais, sites e direção de arte com estética, clareza e estratégia."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="gallery.css">
+
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <a href="index.html" class="back-arrow">&lt;</a>
+    <div class="logo">ILUSTRAÇÕES</div>
+
+    <nav aria-label="Navegação principal">
+      <ul>
+        <li>
+          <a href="#contato" class="cta-primary">
+            SOLICITE UMA PROPOSTA
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+
+
+  <main class="gallery-container">
+
+    <!-- Primeira parte: três imagens lado a lado -->
+    <div class="gallery-grid">
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="assets/design/bortoleto.jpg" alt="Projeto de design 1">
+      </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="assets/design/16.jpg" alt="Projeto de design 3">
+    </div>
+
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="assets/design/17.png" alt="Projeto de design 2">
+      </div>
+    </div>
+
+    <!-- Contato -->
+    <section class="contato" id="contato" aria-labelledby="contato-title">
+      <h2 id="contato-title">Pronto para dar forma à sua marca?</h2>
+
+      <p>
+        Me conte sobre o seu projeto e vamos construir algo que represente você
+        com intenção.
+      </p>
+
+      <form
+        action="https://formsubmit.co/thiagomaklam@outlook.com"
+        method="POST"
+      >
+        <input type="text" name="nome" placeholder="Seu nome" required>
+
+        <input type="email" name="email" placeholder="Seu e-mail" required>
+
+        <textarea
+          name="mensagem"
+          placeholder="Sua mensagem"
+          required
+        ></textarea>
+
+        <input
+          type="hidden"
+          name="_subject"
+          value="Nova mensagem do site MAKLAM"
+        >
+
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+
+        <button type="submit">Enviar mensagem</button>
+      </form>
+
+      <a
+        href="https://wa.me/5564992100678?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20falar%20sobre%20um%20projeto."
+        class="whats-btn"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Fale comigo pelo WhatsApp
+      </a>
+    </section>
+  </main>
+
+
+  <script>
+    function openLightbox(element) {
+      const img = element.querySelector("img");
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+
+      lightbox.classList.add("active");
+    }
+
+    function closeLightbox(event) {
+      if (event.target.id === "lightbox") {
+        document.getElementById("lightbox").classList.remove("active");
+      }
+    }
+
+    function closeLightboxBtn() {
+      document.getElementById("lightbox").classList.remove("active");
+    }
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        document.getElementById("lightbox").classList.remove("active");
+      }
+    });
+  </script>
+</body>
+</html>
