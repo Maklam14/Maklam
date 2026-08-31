@@ -21,33 +21,35 @@
     <a href="index.html" class="back-arrow">&lt;</a>
     <div class="logo">ILUSTRAÇÕES</div>
 
-    <nav>
+    <nav aria-label="Navegação principal">
       <ul>
-        <li><a href="#contato" class="cta-primary">SOLICITE UMA PROPOSTA</a></li>
+        <li>
+          <a href="#contato" class="cta-primary">SOLICITE UMA PROPOSTA</a>
+        </li>
       </ul>
     </nav>
   </header>
 
   <main class="gallery-container">
 
+    <!-- Grade principal -->
     <div class="gallery-grid">
       <div class="gallery-item" onclick="openLightbox(this)">
         <img src="assets/design/bortoleto.jpg" alt="Projeto de design 1">
       </div>
 
       <div class="gallery-item" onclick="openLightbox(this)">
-        <img src="assets/design/16.jpg" alt="Projeto de design 3">
+        <img src="assets/design/16.jpg" alt="Projeto de design 2">
       </div>
 
       <div class="gallery-item" onclick="openLightbox(this)">
-        <img src="assets/design/17.png" alt="Projeto de design 2">
+        <img src="assets/design/17.png" alt="Projeto de design 3">
       </div>
 
-          <div class="gallery-item" onclick="openLightbox(this)">
-      <img src="assets/design/3.jpg" alt="Projeto de design 2">
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="assets/design/3.jpg" alt="Projeto de design 4">
       </div>
     </div>
-
 
     <!-- Lightbox -->
     <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
@@ -56,8 +58,8 @@
     </div>
 
     <!-- Contato -->
-    <section class="contato" id="contato">
-      <h2>Pronto para dar forma à sua marca?</h2>
+    <section class="contato" id="contato" aria-labelledby="contato-title">
+      <h2 id="contato-title">Pronto para dar forma à sua marca?</h2>
       <p>Me conte sobre o seu projeto e vamos construir algo que represente você com intenção.</p>
 
       <form action="https://formsubmit.co/thiagomaklam@outlook.com" method="POST">

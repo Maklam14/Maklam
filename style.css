@@ -1,7 +1,6 @@
-/* Art direction: minimalismo editorial, contraste forte, visual limpo
-   Palette: preto, branco e cinza suave
-   Typography: Space Grotesk para títulos e corpo
-   Density: espaçoso, com foco em clareza visual */
+/* ============================
+   VARIÁVEIS E BASE
+   ============================ */
 
 :root {
     --bg: #f5f5f3;
@@ -42,6 +41,10 @@
     --text-2xl: clamp(2.2rem, 1.5rem + 3vw, 4rem);
     --text-hero: clamp(2.8rem, 1.4rem + 5vw, 5.5rem);
 }
+
+/* ============================
+   RESET
+   ============================ */
 
 * {
     margin: 0;
@@ -93,7 +96,10 @@ p {
     color: var(--text-soft);
 }
 
-/* HEADER */
+/* ============================
+   HEADER
+   ============================ */
+
 header {
     position: fixed;
     top: 0;
@@ -128,7 +134,10 @@ nav a {
     color: var(--white);
 }
 
-/* BOTÕES */
+/* ============================
+   BOTÕES
+   ============================ */
+
 .cta-primary,
 .cta-secondary,
 button,
@@ -168,7 +177,10 @@ button,
     color: var(--black);
 }
 
-/* HERO */
+/* ============================
+   HERO
+   ============================ */
+
 .hero {
     min-height: 100vh;
     padding-top: calc(var(--header-height) + 3rem);
@@ -195,7 +207,10 @@ button,
     color: #d9d9d9;
 }
 
-/* PILARES */
+/* ============================
+   PILARES
+   ============================ */
+
 .pilares {
     text-align: center;
     padding: 6rem 2rem;
@@ -254,23 +269,10 @@ button,
     font-size: var(--text-lg);
 }
 
-.card p {
-    margin-top: var(--space-2);
-}
+/* ============================
+   FRASE
+   ============================ */
 
-/* GALERIA */
-.galeria {
-    max-width: 100%;
-}
-
-.galeria h2 {
-    padding-inline: 6vw;
-    font-size: var(--text-xl);
-    margin-bottom: var(--space-8);
-}
-
-
-/* FRASE */
 .frase {
     background: var(--black);
     color: var(--white);
@@ -282,7 +284,10 @@ button,
     letter-spacing: -0.04em;
 }
 
-/* CONTATO */
+/* ============================
+   CONTATO
+   ============================ */
+
 .contato {
     max-width: 900px;
     margin: 0 auto;
@@ -359,15 +364,16 @@ button:hover {
     background: #1fb85a;
 }
 
-/* RESPONSIVO */
+/* ============================
+   RESPONSIVO
+   ============================ */
+
 @media (max-width: 900px) {
     header {
         padding-inline: 1rem;
     }
 
-    main section,
-    .galeria h2,
-    .carousel {
+    main section {
         padding-inline: 1rem;
     }
 
@@ -376,18 +382,8 @@ button:hover {
         min-height: 90vh;
     }
 
-    .hero h1 {
-        max-width: 12ch;
-    }
-
     .cards {
         gap: 1.5rem;
-    }
-
-    .carousel-track img {
-        flex: 0 0 86vw;
-        width: 86vw;
-        height: 420px;
     }
 }
 
@@ -415,24 +411,14 @@ button:hover {
         max-width: 100%;
     }
 
-    .pilares h2,
-    .frase h2,
-    .contato h2 {
-        max-width: 100%;
-    }
-
-    .card img {
-        aspect-ratio: 4 / 4.8;
-    }
-
-    .carousel-track img {
-        height: 320px;
-    }
-
     form {
         padding: 1.25rem;
     }
 }
+
+/* ============================
+   BOTÃO ESPECIAL
+   ============================ */
 
 .btn-motorsport {
     display: inline-block;
