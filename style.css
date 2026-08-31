@@ -197,14 +197,37 @@ button,
 
 /* PILARES */
 .pilares {
-    max-width: var(--container);
-    margin: 0 auto;
+    text-align: center;
+    padding: 6rem 2rem;
 }
 
 .pilares h2 {
-    max-width: 14ch;
-    font-size: var(--text-2xl);
-    margin-bottom: var(--space-10);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+
+.pilares-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: center;
+}
+
+.pilar-item {
+    width: 280px;
+    padding: 1rem 2rem;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    text-align: center;
+    transition: 0.2s ease;
+}
+
+.pilar-item:hover {
+    background: #222;
 }
 
 .cards {
