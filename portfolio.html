@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Maklam — Ilustrações</title>
+
+  <meta name="description" content="Ilustrações e direção de arte por Maklam.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="gallery.css">
+</head>
+
+<body>
+
+  <header>
+    <a href="index.html" class="back-arrow">&lt;</a>
+    <div class="logo">PORTFOLIO</div>
+
+    <nav aria-label="Navegação principal"> 
+    </nav>
+  </header>
+
+  <main class="gallery-container">
+
+    <!-- Grade principal -->
+    <div class="gallery-grid">
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="assets/design/bortoleto.jpg" alt="Projeto de design 1">
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="assets/design/1.jpg" alt="Projeto de design 2">
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="assets/design/5.jpg" alt="Projeto de design 3">
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="assets/design/3.jpg" alt="Projeto de design 4">
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="assets/design/7.jpg" alt="Projeto de design 4">
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="assets/design/19.png" alt="Projeto de design 4">
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="assets/design/16.jpg" alt="Projeto de design 4">
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="assets/design/14.jpg" alt="Projeto de design 4">
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="assets/design/15.jpg" alt="Projeto de design 4">
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="assets/design/17.png" alt="Projeto de design 4">
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="assets/design/4.jpg" alt="Projeto de design 4">
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="assets/design/6.jpg" alt="Projeto de design 4">
+      </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+      <img id="lightbox-img" src="" alt="">
+      <button class="close-btn" onclick="closeLightboxBtn()">×</button>
+    </div>
+
+  </main>
+
+  <script>
+    function openLightbox(element) {
+      const img = element.querySelector("img");
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+
+      lightbox.classList.add("active");
+    }
+
+    function closeLightbox(event) {
+      if (event.target.id === "lightbox") {
+        document.getElementById("lightbox").classList.remove("active");
+      }
+    }
+
+    function closeLightboxBtn() {
+      document.getElementById("lightbox").classList.remove("active");
+    }
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        document.getElementById("lightbox").classList.remove("active");
+      }
+    });
+  </script>
+
+</body>
+</html>
