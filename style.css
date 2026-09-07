@@ -134,6 +134,27 @@ nav a {
     color: var(--white);
 }
 
+/* ÍCONES CENTRALIZADOS */
+.social-header {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 22px;
+}
+
+.social-header img {
+    width: 24px;
+    height: 24px;
+    /*filter: invert(1); /* deixa branco se o ícone for preto */
+    transition: 0.3s ease;
+}
+
+.social-header img:hover {
+    transform: scale(1.15);
+    opacity: 0.8;
+}
+
 /* ============================
    BOTÕES
    ============================ */
